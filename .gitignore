@@ -1,0 +1,5 @@
+__pycache__/
+# Generated PDFs and PGFs (regenerate with the scripts)
+output/*.pdf
+output/*.pgf
+output/*.tex

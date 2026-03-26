@@ -1,0 +1,32 @@
+{
+  "kernel": "helmholtz",
+  "name": "Helmholtz 2D",
+  "orders": [
+    1,
+    3,
+    5,
+    7,
+    8
+  ],
+  "flops_no_rot_no_rec": [
+    18,
+    106,
+    447,
+    1572,
+    2776
+  ],
+  "flops_rot_no_rec": [
+    15,
+    98,
+    395,
+    1111,
+    1740
+  ],
+  "flops_rot_rec": [
+    15,
+    58,
+    111,
+    165,
+    193
+  ]
+}
