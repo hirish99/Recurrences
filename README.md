@@ -52,6 +52,21 @@ python regenerate_all.py qbx        # QBX convergence only
 python regenerate_all.py cost       # flop count figures only
 ```
 
+## Build the paper
+
+Requires [tectonic](https://tectonic-typesetting.github.io/) or a full
+TeX Live installation:
+
+```bash
+# Install tectonic (if not already installed):
+#   conda install -c conda-forge tectonic   # or
+#   cargo install tectonic                   # or
+#   brew install tectonic                    # macOS
+
+tectonic Paper.tex
+# or: pdflatex Paper.tex && bibtex Paper && pdflatex Paper.tex && pdflatex Paper.tex
+```
+
 ## Scripts
 
 ### `plot_recurrence_error.py` -- Error heatmaps (Figures 3--5)

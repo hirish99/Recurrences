@@ -1,4 +1,5 @@
 __pycache__/
+sumpy-parametric/
 # Generated PDFs and PGFs (regenerate with the scripts)
 output/*.pdf
 output/*.pgf
