@@ -999,7 +999,7 @@ in numerical differentiation is governed by the choice of a mesh spacing paramet
 
 \section{Incorporating Recurrences into QBX}
 \label{sec:qbx}
-A particularly striking setting in which the recurrences introduced above lead to savings of computational cost is the method of Quadrature by Expansion (QBX) for the evaluation of layer potentials. For example, incorporating their use in the context of QBX can reduce the number of floating point operations compared to a baseline by between one and two orders of magnitude, depending on the PDE and truncation order (cf.~Figures~\ref{fig:cost-2d} and~\ref{fig:cost-3d}). In this section, we briefly review QBX and how to incorporate recurrences into it. We then derive a Cartesian version of Target-Specific QBX~\cite{Siegel_2018} (individually leading to a substantial cost savings), and finally show numerical experiments measuring the computational cost impact of each of the algorithmic steps.
+A particularly striking setting in which the recurrences introduced above lead to savings of computational cost is the method of quadrature by expansion (QBX) for the evaluation of layer potentials. For example, incorporating their use in the context of QBX can reduce the number of floating point operations compared to a baseline by between one and two orders of magnitude, depending on the PDE and truncation order (cf.~Figures~\ref{fig:cost-2d} and~\ref{fig:cost-3d}). In this section, we briefly review QBX and how to incorporate recurrences into it. We then derive a Cartesian version of Target-Specific QBX~\cite{Siegel_2018} (individually leading to a substantial cost savings), and finally show numerical experiments measuring the computational cost impact of each of the algorithmic steps.
 
 \subsection{QBX Review}
 Suppose we have a fundamental solution $K(\b{x}, \b{y})$ where $\b{x} ,\b{y}\in \R^d$. Then if we have a density on $\Gamma$ given by $\sigma:\Gamma\to \mathbb R$, the single layer potential at some $\b{x} \in \Gamma$ is given by:
@@ -1007,7 +1007,7 @@ Suppose we have a fundamental solution $K(\b{x}, \b{y})$ where $\b{x} ,\b{y}\in 
 S\sigma(\b{x}) = \int_{\Gamma} K(\b{x}, \b{y})\sigma(\b{y}) d\b{y}.
 \end{equation}
 
-Quadrature By Expansion (QBX) evaluates layer potentials with singular kernels by using an expansion to approximate the kernel \cite{klockner2013quadrature}. If we let $\b{\nu}(\b{y})$ denote the outwards normal to $\Gamma$ at $\b{y}$, let $r \in \R_{>0}$ be the expansion radius and $p_{QBX}$ is the truncation order, we have from \cite{epstein2013convergence}:
+Quadrature by expansion (QBX) evaluates layer potentials with singular kernels by using an expansion to approximate the kernel \cite{klockner2013quadrature}. If we let $\b{\nu}(\b{y})$ denote the outwards normal to $\Gamma$ at $\b{y}$, let $r \in \R_{>0}$ be the expansion radius and $p_{QBX}$ is the truncation order, we have from \cite{epstein2013convergence}:
 \begin{equation}
 \label{eq:qbx}
 S\sigma(\b{x}) \approx  \int_{\Gamma} \sum_{i=0}^{p_{\text{QBX}}} \frac{r^i}{i!}\left. \left( \frac{d^i}{dt^i} K(\b{x} + t\b{\nu}, \b{y})  \right)\right|_{t=-r} \sigma(\b{y}) d\b{y}.

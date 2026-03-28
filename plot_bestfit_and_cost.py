@@ -130,7 +130,7 @@ def generate_bestfit():
     print(f"  Fit slope: {slope:.4f}")
 
     # Plot
-    fig, ax = plt.subplots(1, 1, figsize=(3.5, 3.4))
+    fig, ax = plt.subplots(1, 1, figsize=(5.0, 3.4))
     ax.scatter(ratio_vals, errors, s=10, label="Relative Error", zorder=3)
     ax.plot(ratio_vals, fit_line, "r-",
             label=f"Linear Least Squares Fit Slope: {slope:.4f}", zorder=2)

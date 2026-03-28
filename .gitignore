@@ -1,5 +1,21 @@
 __pycache__/
 sumpy-parametric/
+
+# Claude Code
+.claude/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+texput.*
+
 # Generated PDFs and PGFs (regenerate with the scripts)
 output/*.pdf
 output/*.pgf
